@@ -102,12 +102,12 @@ def getPassword(String currentUser, String keyChain) {
       stdout.toString().trim()
 }
 
-def releasekeypass = getPassword("congthai","awesome-project-release-key")
-def releasekeyalias = getPassword("congthai","awesome-project-key-alias")
+def releasekeypass = getPassword("congthai","android_keystore")
+def releasekeyalias = getPassword("congthai","android_keystore")
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion '25.0.0'
 
     signingConfigs {
         release {
